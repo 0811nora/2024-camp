@@ -52,26 +52,177 @@ img{
 body{
     font-family: "Noto Sans TC", sans-serif;
 }
-.main{
-    width: 850px;
-    margin: 20px auto;
+
+/*-----header----*/
+
+.header{
+    max-width: 1920px;
+    height: 96px;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
 }
 
-.box{
+.header-rwd375px{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: 56px;
+}
+
+.header-rwd375px img{
+    padding-top: 10px;
+}
+
+.header a img{
+    position: absolute;
+    left: 15%;
+    top: 30%;
+}
+.header ul{
+    display: flex;
+    margin: auto;
+    gap: 40px;
+}
+
+
+.header ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px;
+
+
+}
+
+.header ul li a:hover{
+    padding: 3px 5px;
+    font-weight: 600;
+    background: linear-gradient(to left,#919191, #919191) left top no-repeat, 
+                linear-gradient(to bottom, #919191, #919191) left top no-repeat, 
+                linear-gradient(to left, #919191, #919191) right top no-repeat,
+                linear-gradient(to bottom, #919191, #919191) right top no-repeat, 
+                linear-gradient(to left, #919191, #919191) left bottom no-repeat,
+                linear-gradient(to bottom, #919191, #919191) left bottom no-repeat,
+                linear-gradient(to left, #919191, #919191) right bottom no-repeat,
+                linear-gradient(to left, #919191, #919191) right bottom no-repeat;
+    background-size: 1px 8px, 8px 1px, 1px 8px, 8px 1px; 
+}
+
+
+
+/*------banner------*/
+
+.banner{
+    height: 460px;
+    background-color: #FAFAFA;
+}
+
+.banner-content{
+    max-width: 670px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 60px;
+
+}
+.banner-text{
+    position: relative;
+    height: 192px;
+}
+
+.banner-text span{
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    background-origin: padding-box;
+    padding-right: 20px;
+}
+
+.banner-text .quote-left{
+    position: absolute;
+    left: 5px;
+}
+
+.banner-text .quote-right{
+    position: absolute;
+    right: 5px;
+}
+
+.banner-text h3{
+    padding-top: 70px;
+    font-size: 24px;
+}
+
+.banner-text h4{
+    padding-top: 30px;
+    font-size: 24px;
+}
+
+.banner-content ul{
+    display: flex;
+    justify-content: space-between;
+    max-width: 636px;
+    margin-top: 50px;
+}
+.banner-content li{
+    max-width: 298px;
+}
+
+.banner-content ul li h4{
+    font-size: 16px;
+    color: #5b5b5b;
+    padding-bottom: 18px;
+    position: relative;
+
+}
+
+.banner-content ul li h4::after {
+    content: '';
+    position: absolute;
+    left: 47%;
+    top: 27px;
+    bottom: 0px;
+    height: 2px;
+    width: 24px;
+    background-color: #C1C1C1;
+}
+
+.banner-content ul li p{
+    font-size: 16px;
+    color: #3B3B3B;
+    line-height: 28px;
+}
+
+
+
+
+/*------main------*/
+.container{
+    max-width: 1296px;
+    margin: 40px auto;
+}
+
+.work_list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content{
-    width: 410px;
-    margin-bottom: 40px;
+    max-width: 636px;
+    margin-bottom: 60px;
 }
 
 .content img{
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 10px;
+    max-width: 636px;
+    height: 400px;
 }
+
 
 .content h2,p,a{
     margin-left: 8px;
@@ -79,21 +230,251 @@ body{
 
 .content h2{
     font-weight: bolder;
-    font-size: 18px;
-    margin-bottom: 12px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3B3B3B;
 }
 
 .content p{
-    font-size: 12px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 40px;
     color: #7a7a7a;
 }
 
 .content a{
     text-decoration: none;
-    font-size: 12px;
+    font-size: 16px;
     color: #494949;
     background-color: #e6e6e6;
     padding: 2px 10px;
     border-radius: 15px;
+}
+
+.pages{
+    display: flex;
+    justify-content: space-between;
+    width: 152px;
+    margin: 0 auto;
+}
+
+.pages li a{
+    text-decoration: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #3B3B3B;
+    text-align: center;
+    padding: 6px;
+    font-size: 24px;
+    border-radius: 4px;
+}
+
+.pages li a:hover{
+    color: #ffffff;
+    background-color: #1e1e1e;
+
+
+}
+
+/*------footer------*/
+
+footer{
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1296px;
+    height: 424px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.footer .service{
+    max-width: 300px;
+}
+
+.footer .service img{
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer .service h5{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.footer .service p{
+    color: #919191;
+    font-size: 20px;
+}
+
+
+
+.footer ul li a{
+    display: block;
+    width: 306px;
+    height: 72px;
+    text-decoration: none;
+    padding-left: 10px;
+    color: #3B3B3B;
+    font-weight: 400;
+    background-color: #ffffff;
+    padding: 10px 0 10px 30px;
+    border: 1px solid#C1C1C1;
+    border-radius: 8px;
+    margin: 20px;
+
+}
+
+.footer ul li img{
+    vertical-align: middle;
+    margin-right: 15px;
+    border-radius: 10px;
+
+}
+.footer .black img{
+    filter: invert(63%) sepia(0%) saturate(4200%) hue-rotate(150deg) brightness(85%) contrast(90%);
+}
+
+.footer ul li a:hover{
+    background-color: #000000;
+    color: #ffffff;
+    img{filter: brightness(100);}
+}
+
+/*------ RWD-------*/
+
+@media(min-width: 375px){
+    .header-rwd375px{
+        display: none;
+    }
+}
+
+@media(max-width: 375px){ 
+    .header{
+        display: none;
+    }
+
+    .header-rwd375px{
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        height: 56px;
+    }
+    .header-rwd375px img{
+        padding-top: 10px;
+    }
+
+    /*---banner---*/
+
+    .banner{
+        max-width: 100%;
+        height: 540px;
+    }
+    .banner-content{
+        max-width: 100%;
+        padding-top: 40px;
+    }
+    
+    .banner-text .quote-left{
+        width: 64px;
+        height: 64px;
+        left: 40%;
+    }
+    .banner-text .quote-right{
+        display: none;
+    }
+
+    .banner-text {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .banner-text h3{
+        font-size: 20px;
+    }
+    .banner-text h4{
+        margin: 0 auto;
+        width: 260px;
+        font-size: 20px;
+        padding-top: 20px;
+    }
+ 
+
+    .banner-content{
+        max-width: 100%;
+    }
+    .banner-content ul{
+        flex-direction: column;
+        max-width: 235px;
+        text-align: center;
+        margin: 30px auto;
+    }
+    .banner-content li{
+        width: auto;
+    }
+
+    .banner-content ul li p{
+        padding-bottom: 30px;
+        line-height: 23px;
+    }
+
+    /*---main-----*/
+
+
+    .container{
+        max-width: 85%;
+    }
+
+    .content img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .content h2{
+        font-size: 20px;
+    }
+
+    /*----footer----*/
+
+  
+    footer{
+        background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true);
+    }
+    .footer{
+        max-width: 100%;
+        height: 538px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .footer .service{
+        max-width: 240px;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .footer .service h5{
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .footer .service p{
+        color: #919191;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .footer ul li a{
+        height: 64px;
+        padding: 5px 0 5px 50px;
+        max-width: 100%;
+    }
+    
+    
 }
